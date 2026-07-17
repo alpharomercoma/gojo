@@ -12,10 +12,10 @@ This project utilizes particles to render volume-based cursed techniques:
     * **Trigger:** "Pinch" gesture (Thumb + Index touching).
 * **Domain Expansion: Infinite Void**
     * **Visuals:** A multi-layered celestial domain featuring a bright event horizon ring, a vertical stream of infinite information, and a deep cosmos background.
-    * **Trigger:** "Cross" gesture (Index + Middle fingers crossed).
+    * **Trigger:** "Cross" gesture (Index crossed over Middle finger).
 * **Cursed Technique Reversal: Red**
     * **Visuals:** A blinding white-hot core generating a violent, jagged sphere of repulsive force.
-    * **Trigger:** Index finger pointing up.
+    * **Trigger:** Index + Middle fingers extended (together or apart, as long as they're not crossed).
 * **Domain Expansion: Malevolent Shrine**
     * **Visuals:** A dark, ominous aura representing the King of Curses.
     * **Trigger:** Flat hand / Prayer gesture.

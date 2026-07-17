@@ -190,11 +190,17 @@
 
                 const isUp = (t, p) => lm[t].y < lm[p].y;
                 const pinch = Math.hypot(lm[8].x - lm[4].x, lm[8].y - lm[4].y);
-                
+                // crossed fingers: tip separation projected on the knuckle axis, in units
+                // of knuckle distance — ~1 side-by-side, ~0.8 pressed together, and it
+                // collapses toward 0 (then negative) as the index crosses the middle.
+                const knX = lm[5].x - lm[9].x, knY = lm[5].y - lm[9].y;
+                const crossed = (lm[8].x - lm[12].x) * knX + (lm[8].y - lm[12].y) * knY
+                              < 0.4 * (knX * knX + knY * knY);
+
                 if (pinch < 0.04) detected = 'purple';
+                else if (isUp(8,6) && isUp(12,10) && crossed) detected = 'void';
                 else if (isUp(8,6) && isUp(12,10) && isUp(16,14) && isUp(20,18)) detected = 'shrine';
-                else if (isUp(8,6) && isUp(12,10) && !isUp(16,14)) detected = 'void';
-                else if (isUp(8,6) && !isUp(12,10)) detected = 'red';
+                else if (isUp(8,6) && isUp(12,10) && !isUp(16,14)) detected = 'red';
             });
         }
         updateState(detected);
